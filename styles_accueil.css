@@ -26,22 +26,105 @@ header {
     max-width: 75%;
     display: flex;
     flex-direction: column;
-    justify-content: safe;
+    align-items: center;
+    justify-content: center;
 }
 
-.moving-background{
+.moving-background {
+    position: relative;
+    text-align: center;
     background-color: #3a3a3a;
-    border-radius: 2%;
+    border-radius: 15px;
     color: whitesmoke;
-    width: 25%;
+    width: 60%;
+    overflow: hidden; /* Cache tout ce qui dépasse la div */
+    padding: 10%;
 }
 
-.section {
+.scrolling-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Derrière le h1 */
+    pointer-events: none; /* Empêche l'interaction avec les textes en arrière-plan */
 }
 
-.section h1 {
+.code-snippet {
+    position: absolute;
+    font-family: monospace;
+    font-size: larger;
+    width: 100%;
+    white-space: nowrap;
+    animation: scroll-horizontal 10s linear infinite;
+}
+
+.code-snippet:nth-child(2) {
+    top: 30%; /* Décalage vertical */
+    animation-duration: 8s; /* Vitesse différente */
+}
+
+.code-snippet:nth-child(3) {
+    top: 60%; /* Décalage vertical */
+    animation-duration: 12s; /* Vitesse différente */
+}
+
+.code-snippet:nth-child(4) {
+    top: 45%; /* Décalage vertical */
+    animation-duration: 16s; /* Vitesse différente */}
+
+.code-snippet:nth-child(5) {
+    top: 15%; /* Décalage vertical */   
+    animation-duration: 9s; /* Vitesse différente */}
+
+.code-snippet:nth-child(6) {
+    top: 50%; /* Décalage vertical */
+    animation-duration: 24s; /* Vitesse différente */}
+
+.code-snippet:nth-child(7) {
+    top: 50%; /* Décalage vertical */
+    animation-duration: 22s; /* Vitesse différente */}
+
+.code-snippet:nth-child(8) {
+    top: 15%; /* Décalage vertical */
+    animation-duration: 28s; /* Vitesse différente */}
+
+.code-snippet:nth-child(9) {
+    top: 50%; /* Décalage vertical */
+    animation-duration: 14s; /* Vitesse différente */}
+
+.blur-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 8; /* Above the scrolling text but below the h1 */
+    backdrop-filter: blur(1px); /* Applies the blur effect */
+    pointer-events: none; /* Prevent interaction with this layer */
+}
+
+.moving-background h1 {
+    position: relative;
+    z-index: 9; 
+    margin: 0;
+}
+
+/* Animation de défilement horizontal */
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(120%);
+    }
+    100% {
+        transform: translateX(-120%);
+    }
+}
+
+.moving-background > h1 {
     font-size: 24px;
     margin-bottom: 10px;
+    z-index: 2;
 }
 
 .section p {
@@ -50,6 +133,8 @@ header {
 }
 
 .section_projects {
+    text-align: center;
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -66,8 +151,6 @@ header {
     margin-top: 6%;
     flex-direction: row;
 }
-
-
 
 #droite.project  {
     margin-top: 6%;
@@ -89,12 +172,6 @@ header {
     transform: scale(1.1);
     z-index: 10;
 }
-
- .project_text {
-    
-
-}
-
 
 a, a:visited, a:hover, a:active {
     color: inherit;
