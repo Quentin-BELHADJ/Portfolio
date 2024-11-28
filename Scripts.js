@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 .then(response => response.json())
                 .then(snippets => {
                     // Ajouter des snippets aléatoires
-                    for (let i = 0; i < 20; i++) {
+                    for (let i = 0; i < 35; i++) {
                         const randomSnippet = snippets[Math.floor(Math.random() * snippets.length)];
 
                         // Créer un élément <p> pour chaque snippet
@@ -20,12 +20,15 @@ document.addEventListener("DOMContentLoaded", () => {
                         snippetElement.textContent = randomSnippet; // Insère le contenu brut
                         scrollingText.appendChild(snippetElement);
 
-                        const randomTop = Math.random() * 90+5; 
+                        const randomTop = Math.random() * 85; 
                         snippetElement.style.top = `${randomTop}%`;
 
                         
                         const randomDuration = Math.random() * 16 + 8; 
                         snippetElement.style.animationDuration = `${randomDuration}s`;
+
+                        const randomSize = Math.random(0.7-0.3) +0.3 ;
+                        snippetElement.style.fontSize = `${randomSize}em`;
                     }
 
                     // Appliquer la coloration syntaxique après la création des snippets

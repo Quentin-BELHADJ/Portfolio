@@ -1,7 +1,7 @@
 [
     "const name = \"Quentin\";",
     "function greet() { return \"Hello\"; }",
-    "let age = 25;",
+    "let age = 23;",
     "console.log(\"Hello, World!\");",
     "const sum = (a, b) => a + b;",
     "if (true) { console.log(\"It works!\"); }",
@@ -10,8 +10,8 @@
     "do { console.log(\"Looping...\"); } while (true);",
     "try { throw new Error(\"Oops!\"); } catch (e) { console.error(e); }",
     "function applySyntaxHighlighting(keywords) {",
-    "  const code = document.querySelector('.code');",
-    "  keywords.forEach(({ word, class }) => {",
-    "    const regex = new RegExp(`\\b${word}\\b`, 'g');"
+    "const code = document.querySelector('.code');",
+    "keywords.forEach(({ word, class }) => {",
+    "const regex = new RegExp(`\\b${word}\\b`, 'g');"
 
 ]
