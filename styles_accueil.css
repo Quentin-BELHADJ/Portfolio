@@ -19,7 +19,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     background: rgb(54,29,134);
-    background: linear-gradient(90deg, rgb(7, 5, 13) 0%, rgb(20, 17, 101) 30%, rgb(38,17,101) 60%, rgb(7, 5, 13) 100%);
+    background: linear-gradient(90deg, rgb(7, 5, 13) 0%, rgb(20, 17, 101) 20%, rgb(38,17,101) 80%, rgb(7, 5, 13) 100%);
 }
 
 header {
@@ -50,7 +50,7 @@ header {
     margin-top: 4%;
     position: relative;
     text-align: center;
-    background-color: rgb(11, 1, 41);
+    background-color: rgb(7, 1, 26);
     border-radius: 99rem;
     color: whitesmoke;
     width: 125%;
@@ -134,20 +134,20 @@ header {
     flex-direction: row;
     justify-content: center;
     margin-top: 5%;
-    width: 115%;
+    width: 125%;
 
 }
 
 .section {
     padding: 2%;
-    width: 40%;
     overflow-wrap: break-word;
-    transition: background 1s ease;
+    transition: background 0.7s ease;
     border-radius: 15px;
 }
 
 .section h2 {
     font-size: 3rem;
+    margin:0;
     text-align: center;
 }
 
@@ -174,15 +174,16 @@ header {
     text-align: center;
     display: grid;
     width: 120%;
-    grid-template-areas: 'github projet1 projet1 projet1 projet1  projet1'
+    grid-template-areas: 'github projet1 projet1 projet1 projet1'
 
-                        'projet2 projet2 projet2 projet2 projet2  projet3';
-    gap:2%;
+                        'projet2 projet2 projet2 projet2 projet3';
+    gap: 1% 1%;
     flex-direction: column;
     justify-content: space-around;
     z-index: 0;
     margin-bottom: 5%;
 }
+
 .project {
     background: var(--box-background);
     position: relative;
@@ -204,33 +205,29 @@ header {
 .project_preview {
     border-radius: 10px;
     overflow: hidden;
-    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+    transition: filter 0.6s ease;
+
 }
 .project:hover .project_preview {
-    -webkit-filter: brightness(50%);
-    -webkit-transition: all .3s ease
+    filter: brightness(10%);
 }
 
 .project_text{
     position: absolute;
     opacity: 0;
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
+    transition: opacity .45s ease;
+    font-size: larger;
 }
 
 .project:hover .project_text{
     opacity: 1;
 }
 
-
-
 .project:hover {
     transform: scale(1.1);
     z-index: 10;
     box-shadow:0 0 20px 5px rgba(108, 137, 211, 0.7), 0 0 10px 10px rgba(47, 6, 231, 0.7), 0 0 10px 10px rgba(47, 6, 231, 0.7);
-    
-
 }
 
 
