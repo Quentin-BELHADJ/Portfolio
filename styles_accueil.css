@@ -82,7 +82,7 @@ header {
     text-shadow: rgb(31, 100, 250) 0px 0px 13px;
     z-index: 9; 
     font-size: 4rem;
-    backdrop-filter: blur(0.75px); /* Applies the blur effect */
+    backdrop-filter: blur(0.75px);
     z-index: 2;
     border-radius: 5px;
 }
@@ -114,7 +114,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.275);
+    background-color: rgba(0, 0, 0, 0.361);
     z-index: 8;
     backdrop-filter: blur(2px);
     pointer-events: none; 
