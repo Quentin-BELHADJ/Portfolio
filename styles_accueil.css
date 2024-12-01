@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght,ROND@900,100&display=swap');
 :root { 
     --neon-color: rgba(47, 119, 231, 0.6);
     --neon-glow:rgba(47, 119, 231, 0.4);
@@ -7,12 +8,18 @@
 
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Doto, sans-serif;
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:"ROND" 100;
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background: rgb(54,29,134);
-    background: linear-gradient(90deg, rgb(7, 5, 13) 0%, rgb(38,17,101) 30%, rgb(38,17,101) 60%, rgb(7, 5, 13) 100%);
+    background: linear-gradient(90deg, rgb(7, 5, 13) 0%, rgb(20, 17, 101) 30%, rgb(38,17,101) 60%, rgb(7, 5, 13) 100%);
 }
 
 header {
@@ -46,7 +53,7 @@ header {
     background-color: rgb(11, 1, 41);
     border-radius: 99rem;
     color: whitesmoke;
-    width: 115%;
+    width: 125%;
     overflow: hidden;
     padding: 10%;
     animation: pulsate 4s infinite ;
@@ -135,26 +142,26 @@ header {
     padding: 2%;
     width: 40%;
     overflow-wrap: break-word;
-    transition: box-shadow 0.3s ease, background 1.2s ease;
+    transition: background 1s ease;
     border-radius: 15px;
-
-
 }
 
+.section h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.section p {
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
 .section:nth-child(2){
     margin-left: 5%;
 }
 
 .section:hover {
-    box-shadow:0 0 15px 5px var(--neon-color), 
-    0 0 30px 15px var(--neon-glow);
-    background: var(--box-background);
-}
-
-.section p {
-    text-align: justify;
-    font-size: 16px;
-    line-height: 1.5;
+    background: rgba(0,0,0, 0.6);
 }
 
 .github {grid-area: github;}
@@ -166,10 +173,10 @@ header {
     margin-top: 5%;
     text-align: center;
     display: grid;
-    width: 100%;
-    grid-template-areas: 'github projet1 projet1 projet1 projet1 projet1 projet1'
+    width: 120%;
+    grid-template-areas: 'github projet1 projet1 projet1 projet1  projet1'
 
-                        'projet2 projet2 projet2 projet2 projet2 projet2 projet3';
+                        'projet2 projet2 projet2 projet2 projet2  projet3';
     gap:2%;
     flex-direction: column;
     justify-content: space-around;
@@ -187,21 +194,43 @@ header {
     transition:  transform .2s,  box-shadow .3s ease;
 }
 
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
 .project_preview {
     border-radius: 10px;
     overflow: hidden;
-    width: 100%;
-    height: auto;
+    -webkit-filter: brightness(100%);
+}
+.project:hover .project_preview {
+    -webkit-filter: brightness(50%);
+    -webkit-transition: all .3s ease
 }
 
 .project_text{
     position: absolute;
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
 }
+
+.project:hover .project_text{
+    opacity: 1;
+}
+
+
 
 .project:hover {
     transform: scale(1.1);
     z-index: 10;
     box-shadow:0 0 20px 5px rgba(108, 137, 211, 0.7), 0 0 10px 10px rgba(47, 6, 231, 0.7), 0 0 10px 10px rgba(47, 6, 231, 0.7);
+    
+
 }
 
 
