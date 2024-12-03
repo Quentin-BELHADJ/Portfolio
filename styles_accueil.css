@@ -164,24 +164,47 @@ header {
     background: rgba(0,0,0, 0.6);
 }
 
-.github {grid-area: github;}
-.projet1 {grid-area: projet1;}
-.projet2 {grid-area: projet2;}
-.projet3 {grid-area: projet3;}
-
 .section_projects {
     margin-top: 5%;
     text-align: center;
     display: grid;
-    width: 120%;
-    grid-template-areas: 'github projet1 projet1 projet1 projet1'
-
-                        'projet2 projet2 projet2 projet2 projet3';
-    gap: 1% 1%;
-    flex-direction: column;
-    justify-content: space-around;
-    z-index: 0;
+    width: 100%; 
+    grid-template-areas: 
+        'github projet1 projet1 projet1'
+        'projet2 projet2 projet2 projet3';
+    grid-template-columns: 3fr 1fr 1fr 3fr; 
+    grid-template-rows: minmax(100px, auto) minmax(100px, auto); 
+    gap: 1%; 
+    justify-content: center;
+    align-items: center;
     margin-bottom: 5%;
+}
+
+.github {
+    grid-area: github;
+    justify-self: start;
+    align-self: center;
+
+    height: 100%; /* Ensures it fits the row */
+}
+
+.projet1 {
+    grid-area: projet1;
+    align-self: center;
+    height: 100%; /* Consistent height */
+}
+
+.projet2 {
+    grid-area: projet2;
+    align-self: center;
+    height: 100%; /* Consistent height */
+}
+
+.projet3 {
+    grid-area: projet3;
+    justify-self: end;
+    align-self: center;
+    height: 100%; /* Consistent height */
 }
 
 .project {
