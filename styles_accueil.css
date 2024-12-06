@@ -172,7 +172,7 @@ header {
     grid-template-areas: 
         'github projet1 projet1 projet1'
         'projet2 projet2 projet2 projet3';
-    grid-template-columns: 3fr 1fr 1fr 3fr; 
+    grid-template-columns: 2fr 1fr 1fr 2fr; 
     grid-template-rows: minmax(100px, 350px) minmax(100px, 350px); 
     gap: 1%; 
     justify-content: center;
@@ -196,6 +196,7 @@ header {
 .projet2 {
     grid-area: projet2;
     align-self: center;
+    object-fit: cover;
     height: 100%; /* Consistent height */
 }
 
