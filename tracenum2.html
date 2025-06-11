@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./Assets/style_trace.css">
+    <script src="navbar.js"></script>
+</head>
+<body>
+    <div id="navbar-container"></div>
+	<div class="content">
+		<h1>Tests : Couvrir les chemins critiques pour garantir la fiabilité</h1>
+		<div ="description">
+        <p>Une fois la fonction de connexion développée, j’ai rédigé une série complète de <strong>tests unitaires</strong> pour valider son comportement dans toutes les situations critiques. L’objectif n’était pas simplement de vérifier qu’elle fonctionne, mais de m’assurer qu’elle réagit correctement, même en cas d’erreurs ou de tentatives inattendues.</p>
+        </div>     
+
+		<div class="bloc-gauche">
+			<div class="trace">
+				<img src="./Assets/traces2/test_login.png" alt="Exemples de tests unitaires Jest">
+				<p class="légende">Figure 1 : Tests Jest couvrant les cas critiques de la fonction de connexion</p>
+			</div>
+
+			<div class="description">
+				<p>La <strong>Figure 1</strong> présente cette série de tests automatisés, structurés pour anticiper les comportements à risque et vérifier la robustesse de la fonction. Cette méthodologie m’a été transmise lors des <strong>cours de qualité de développement</strong> et m’a permis d’appliquer une démarche rigoureuse fondée sur des cas concrets.</p>
+
+				<p>Les scénarios testés sont les suivants :</p>
+				<ul>
+					<li>Connexion réussie (administrateur et utilisateur)</li>
+					<li>Mot de passe incorrect</li>
+					<li>Nom d’utilisateur invalide</li>
+					<li>Champs requis manquants</li>
+					<li>Erreur interne (ex : base de données indisponible)</li>
+					<li>Tentative d’un administrateur de se connecter via une route utilisateur</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Image à droite, texte à gauche -->
+		<div class="bloc-droite">
+			<div class="trace">
+				<img src="./Assets/traces2/test_coverage.png" alt="Tableau de couverture de test">
+				<p class="légende">Figure 2 : Couverture complète des différents fichiers de l'application</p>
+			</div>
+
+			<div class="description">
+				<p>La <strong>Figure 2</strong> met en évidence une couverture de test à <strong>100 %</strong> sur toutes les métriques clés :</p>
+				<ul>
+					<li><strong>Instructions exécutées</strong></li>
+					<li><strong>Branches conditionnelles</strong></li>
+					<li><strong>Fonctions</strong></li>
+					<li><strong>Lignes de code</strong></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="description">
+			<p>Tester efficacement, c’est anticiper les failles potentielles avant qu’elles ne provoquent des dysfonctionnements. Cette rigueur fait partie intégrante des bonnes pratiques que j’ai intégrées durant ma formation, en particulier dans le cadre des cours de qualité de développement.</p>
+
+			<h2>Compétences mobilisées</h2>
+                <p>Cette phase m’a permis de mobiliser plusieurs compétences issues du 
+                    <strong><a href="https://www.enseignementsup-recherche.gouv.fr/sites/default/files/annexe-2-licence-professionnelle-bachelor-universitaire-de-technologie-informatique-29016.pdf#page=16" target="_blank">
+                        référentiel du BUT Informatique (page 16)
+                    </a></strong> :</p>
+                <ul>
+                    <li><strong>Réaliser</strong> – CE1.04 : concevoir un code fiable, lisible et maintenable</li>
+                    <li><strong>Optimiser</strong> – CE2.04 : valider les résultats, identifier les erreurs et justifier les choix techniques</li>
+                    <li><strong>Optimiser</strong> – CE2.05 : contrôler le respect des spécifications via des tests</li>
+                </ul>
+                <p>Cette expérience m’a permis de renforcer mes compétences en qualité de développement et d'appliquer ce que j'ai appris lors de ma formation. Lorsqu’ils sont associés à un workflow GitHub, ces tests automatisés permettent de sécuriser les déploiements en détectant rapidement les erreurs potentielles avant les mises en production.</p>
+                </div>
+	</div>
+    <script src="./Assets/script_trace.js"></script>
+</body>
+
+</html>

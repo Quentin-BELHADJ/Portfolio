@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contexte du stage - TDO / KAP</title>
+	<link rel="stylesheet" href="Assets/style_trace.css">
+    <script src="navbar.js"></script>
+</head>
+<body>
+    <div id="navbar-container"></div>
+	<div class="content">
+		<h1>Stage chez Terrasse des Oliviers (TDO) - Développement de la plateforme Kit à Planter</h1>
+
+		<div class="description">
+			<h2>Contexte</h2>
+			<p>
+				Dans le cadre de son développement numérique, la société <strong>Terrasse des Oliviers</strong> (TDO) a lancé la création de la plateforme <strong>Kit à Planter</strong> (KAP), une application web permettant aux utilisateurs de configurer leur terrasse à l’aide de modules végétalisés. L’outil repose sur une architecture full-stack : un back-end en Node.js, connecté à une base PostgreSQL via Prisma, et un front-end en React avec Next.js.
+			</p>
+		</div>
+
+		<div class="description">
+			<h2>Objectifs du stage</h2>
+			<p>
+				Mon stage avait pour objectif de contribuer au développement du <strong>back-end de l'application</strong> KAP. J’étais en charge de l’évolution des fonctionnalités de l’API, de la connexion avec la base de données, de la gestion des fichiers, de la mise en place de tests automatisés et de l’amélioration générale de la structure du projet.
+			</p>
+		</div>
+
+		<div class="description">
+			<h2>Missions réalisées</h2>
+			<ul>
+				<li>Développement de routes sécurisées d’authentification avec gestion des rôles via JWT.</li>
+				<li>Implémentation complète des opérations CRUD sur les entités : utilisateurs, plantes, pots, collections, sauvegardes, etc.</li>
+				<li>Organisation du code backend : séparation des routes, middlewares, contrôleurs et utilitaires.</li>
+				<li>Écriture de <strong>tests unitaires</strong> et <strong>tests d’intégration</strong> avec <code class="keyword">Jest</code> et <code class="keyword">Supertest</code>, avec une couverture atteignant 100 %.</li>
+				<li>Création de routes spécifiques pour générer des documents (devis, factures) en PDF avec <code class="keyword">jsPDF</code>.</li>
+				<li>Développement collaboratif avec l’équipe front-end pour connecter l’interface Next.js à l’API.</li>
+				<li>Participation à l'intégration de l'API avec le <strong>back-office PHP</strong> existant.</li>
+				<li>Implémentation d’un tableau de bord des erreurs pour le support technique.</li>
+			</ul>
+		</div>
+
+		<div class="description">
+			<h2>Technologies utilisées</h2>
+			<ul>
+				<li><strong>Langages :</strong> JavaScript, TypeScript</li>
+				<li><strong>Back-end :</strong> Node.js, Express.js, Prisma, PostgreSQL</li>
+				<li><strong>Front-end :</strong> React.js, Next.js</li>
+				<li><strong>Outils :</strong> Jest, Supertest, Multer, Sharp, JWT, PM2, dotenv, GitHub Actions, jsPDF</li>
+			</ul>
+		</div>
+
+		<div class="description">
+			<h2>Conclusion</h2>
+			<p>
+				Ce stage m’a permis d’acquérir une expérience concrète en développement d’une API professionnelle, tout en appliquant les bonnes pratiques de tests, de sécurité et d’organisation de code. J’ai également pu évoluer dans une équipe agile et participer aux choix techniques dans une architecture multi-applications. Ce projet a renforcé mes compétences back-end et ma capacité à collaborer efficacement sur des projets complexes en production.
+			</p>
+		</div>
+        <div class="description">
+            <h2>Exploration détaillée de deux réalisations</h2>
+            <div class="trace-link-container">
+                <div class="trace-link-card">
+                    <h3>🔐 Fonction de connexion sécurisée</h3>
+                    <p>Mise en œuvre complète de l’authentification avec JWT, validation et sécurisation via Prisma.</p>
+                    <a href="tracenum1.html">Voir la trace 1</a>
+                </div>
+        
+                <div class="trace-link-card">
+                    <h3>🧪 Tests unitaires avec Jest</h3>
+                    <p>Série de tests couvrant tous les cas critiques, avec une couverture de code à 100 %.</p>
+                    <a href="tracenum2.html">Voir la trace 2</a>
+                </div>
+            </div>
+        </div>        
+	</div>
+</body>
+</html>

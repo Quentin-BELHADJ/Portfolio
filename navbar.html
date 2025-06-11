@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- navbar.html -->
+<nav class="navbar">
+	<ul class="nav-menu">
+		<li><a href="index.html">Accueil</a></li>
+		<li class="dropdown">
+			<a href="universite.html">Université</a>
+			<ul class="dropdown-content">
+				<li><a href="tracenum1.html">Trace 1</a></li>
+				<li><a href="tracenum2.html">Trace 2</a></li>
+			</ul>
+		</li>
+	</ul>
+</nav>
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Doto:wght,ROND@900,100&display=swap');
+
+	.navbar {
+		background-color: #33333325;
+		padding: 10px;
+		font-family: 'Doto', sans-serif;
+
+	}
+
+	.nav-menu {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+	}
+
+	.nav-menu > li {
+		position: relative;
+		margin-right: 20px;
+	}
+
+	.nav-menu a {
+		color: white;
+		text-decoration: none;
+		padding: 10px;
+		display: block;
+	}
+
+	.nav-menu a:hover {
+		background-color: #555;
+	}
+
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #444;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+		z-index: 1;
+	}
+
+	.dropdown-content li {
+		margin: 0;
+	}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+</style>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Trace compétence</title>
+	<link rel="stylesheet" href="./Assets/style_trace.css">
+    <script src="navbar.js"></script>
+</head>
+<body>
+    <div id="navbar-container"></div>
+	<div class="content">
+		<h1>Fonction de connexion sécurisée</h1>
+
+        <div class="description">
+			<p>Dans le cadre de mon stage chez KAP, j’ai travaillé sur la mise en place de la fonction de connexion de l’application web. Cette fonctionnalité est essentielle pour permettre aux utilisateurs de s’authentifier de manière sécurisée et accéder à leurs données personnelles.</p>
+        </div>  
+        <div class="bloc-gauche">
+		<div class="trace">
+			<img src="./Assets/traces1/login.png" alt="Fonction de connexion en Node.js pour le back-end de l'application KAP">
+			<p class="légende">Figure 1 : Fonction de connexion en Node.js (back-end de l'application KAP)</p>
+		</div>
+
+		<div class="description">
+
+			<p>La Figure 1 illustre cette fonction écrite en Node.js, utilisant Prisma pour l'accès à la base de données et bcrypt pour le hachage des mots de passe. Le code vérifie les identifiants fournis, compare le mot de passe avec celui stocké, puis génère un jeton JWT si l’authentification est réussie.</p>
+
+			<p>Le système est conçu pour garantir la sécurité des données : aucun mot de passe n’est conservé en clair, et des messages d’erreur appropriés sont retournés en cas d’échec.</p>
+
+			<p>Avant refonte, la fonction ne validait pas la présence des champs <code class="keyword">username</code> et <code class="keyword">password</code> dans le corps de la requête. Cela provoquait un bug dont l’origine exacte reste floue : le dernier utilisateur supprimé pouvait encore se connecter uniquement avec son mot de passe, sans fournir d’identifiant.</p>
+        </div>
+        </div>
+        <div class="bloc-droite">
+			<div class="trace">
+				<img src="./Assets/traces1/schema.png" alt="Schéma du problème de connexion">
+				<p class="légende">Figure 2 : Schéma illustrant le dysfonctionnement observé</p>
+			</div>
+        <div class="description">
+			<p>Comme le montre la Figure 2, un utilisateur <i>null</i> renvoyait encore le mot de passe du dernier compte supprimé. Bien que ce ne soit pas un risque critique, le fait que l’équipe de développement ait accès au back-office et soit constituée majoritairement de stagiaires et alternants aurait pu entraîner des accès non autorisés à long terme.</p>
+        </div>  
+        </div>  
+        <div class="description">
+			<p>Après correction, la fonction valide désormais la présence des champs requis dans la requête, ce qui renforce la sécurité et la robustesse du système. Cette vérification, courante en développement, m’a été enseignée dans le cadre des cours sur les services web. Elle rappelle les vérifications d’arguments dans les programmes classiques, comme illustré ci-dessous :</p>
+
+			<code>
+				if (!username || !password) {
+					return res.status(400).json({ success: false, message: "Nom d'utilisateur et mot de passe requis." });
+				}
+			</code>
+
+			<p>J’ai également centralisé deux fonctions similaires en une seule, en ajoutant une vérification du type d’utilisateur (utilisateur standard ou administrateur) dès la ligne 8.</p>
+            </div>
+            
+            <div class="description">
+                <h2>Compétences mobilisées</h2>
+                <p>Cette intervention m’a permis de mobiliser plusieurs compétences du 
+                    <strong><a href="https://www.enseignementsup-recherche.gouv.fr/sites/default/files/annexe-2-licence-professionnelle-bachelor-universitaire-de-technologie-informatique-29016.pdf#page=16" target="_blank">
+                        référentiel du BUT Informatique (page 16)
+                    </a></strong> :</p>
+                <ul>
+                    <li><strong>Réaliser</strong> – CE1.01 : en respectant les besoins décrits par le client</li>
+                    <li><strong>Réaliser</strong> – CE1.03 : en appliquant les principes algorithmiques</li>
+                    <li><strong>Réaliser</strong> – CE1.04 : en veillant à la qualité du code et à sa documentation</li>
+                    <li><strong>Réaliser</strong> – CE1.06 : en choisissant les ressources techniques appropriées</li>
+                    <li><strong>Concevoir</strong> – CE2.01 : en proposant une solution adaptée à un besoin exprimé</li>
+                    <li><strong>Se former</strong> – en analysant un dysfonctionnement et en mettant en œuvre une solution autonome</li>
+                </ul>
+                <p>La refonte de la fonction de connexion m’a permis de respecter les attentes fonctionnelles du client, tout en appliquant des principes fondamentaux d’algorithmique et de sécurité. Le choix d’outils adaptés comme <code class="keyword">bcrypt</code> ou <code class="keyword">Prisma</code>, ainsi que la clarté du code, témoignent de cette mise en œuvre structurée.</p>
+                <p>Cette expérience a renforcé mes compétences en développement back-end, en particulier dans la sécurisation des connexions utilisateur. Elle m’a permis de mieux comprendre l’importance de la validation des entrées et la gestion sécurisée des données sensibles.</p>
+
+            </div>
+		</div>
+	</div>
+    <script src="./Assets/script_trace.js"></script>
+</body>
+</html>
